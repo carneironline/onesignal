@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+
+        <link rel="stylesheet" href="/src/style.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <h1>OneSignal Test</h1>
+
+                <div class="card">
+                    <button type="button" data-onesignal-tag="term-saude" data-onesignal-value="click">
+                        saúde
+                    </button>
+                    <button type="button" data-onesignal-tag="term-gastronomia" data-onesignal-value="click">
+                        Gastronomia
+                    </button>
+                    <button type="button" data-onesignal-tag="term-politica" data-onesignal-value="click">
+                        Política
+                    </button>
+                    <button type="button" data-onesignal-tag="term-educacao" data-onesignal-value="click">
+                        Educação
+                    </button>
+                    <button type="button" data-onesignal-tag="term-esportes" data-onesignal-value="click">
+                        Esportes
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            const UserDataGloboId = {
+                autorizado: false,
+                logado: false,
+                motivo: 'INEXISTENTE',
+                glbid: '1fe8362f0b8e5a9c07be8094fb974f9784f6e6156734b38613765796d586b3432736d6a6950506b39676b6b50654f376647387a584d396f37456c33714d3959624a736c306e4c646a465a704b784d32514861374174734c376e50414270596467395f6d372d673d3d3a303a75743030727a636d7265636a72646976726a6c34',
+                uuid: '01ad3878-791d-49bf-932c-e2fbc7f35790',
+                access_token:
+                    'eyJhbGciOiJSUzI1NiIsImtpZCI6IjVmMDRhNzM2LWNhMDMtNGI5YS1hNTc2LTFmNzVmODlkNDMyNSIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2dsb2JvLXFhQGFwcHMuZ2xvYm9pZCIsImF1ZF9hcGktcGVyc29uYWxpemFjYW8iLCJhcGktcGVyc29uYWxpemFjYW8iXSwiYXpwIjoib2dsb2JvLXFhQGFwcHMuZ2xvYm9pZCIsImVtYWlsIjoicm9kcmlnby5jYXJuZWlyby5pbXB1bHNvQGVkZ2xvYm8uY29tLmJyIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJleHAiOjE3NTAxODI4MjIsImZlZGVyYXRlZF9zaWQiOiIxZmU4MzYyZjBiOGU1YTljMDdiZTgwOTRmYjk3NGY5Nzg0ZjZlNjE1NjczNGIzODYxMzc2NTc5NmQ1ODZiMzQzMjczNmQ2YTY5NTA1MDZiMzk2NzZiNmI1MDY1NGYzNzY2NDczODdhNTg0ZDM5NmYzNzQ1NmMzMzcxNGQzOTU5NjI0YTczNmMzMDZlNGM2NDZhNDY1YTcwNGI3ODRkMzI1MTQ4NjEzNzQxNzQ3MzRjMzc2ZTUwNDE0MjcwNTk2NDY3Mzk1ZjZkMzcyZDY3M2QzZDNhMzAzYTc1NzQzMDMwNzI3YTYzNmQ3MjY1NjM2YTcyNjQ2OTc2NzI2YTZjMzQiLCJmc19pZCI6Ik9uYVZzSzhhN2V5bVhrNDJzbWppUFBrOWdra1BlTzdmRzh6WE05bzdFbDNxTTlZYkpzbDBuTGRqRlpwS3hNMlFIYTdBdHNMN25QQUJwWWRnOV9tNy1nPT0iLCJnbGJpZCI6IjFmZTgzNjJmMGI4ZTVhOWMwN2JlODA5NGZiOTc0Zjk3ODRmNmU2MTU2NzM0YjM4NjEzNzY1Nzk2ZDU4NmIzNDMyNzM2ZDZhNjk1MDUwNmIzOTY3NmI2YjUwNjU0ZjM3NjY0NzM4N2E1ODRkMzk2ZjM3NDU2YzMzNzE0ZDM5NTk2MjRhNzM2YzMwNmU0YzY0NmE0NjVhNzA0Yjc4NGQzMjUxNDg2MTM3NDE3NDczNGMzNzZlNTA0MTQyNzA1OTY0NjczOTVmNmQzNzJkNjczZDNkM2EzMDNhNzU3NDMwMzA3MjdhNjM2ZDcyNjU2MzZhNzI2NDY5NzY3MjZhNmMzNCIsImdsb2JvX2lkIjoiMDFhZDM4NzgtNzkxZC00OWJmLTkzMmMtZTJmYmM3ZjM1NzkwIiwiaWF0IjoxNzUwMTc5MjIwLCJpc3MiOiJodHRwczovL2dvaWRjLmF1dGhlbnRpY2F0aW9uLnFhLmdsb2JvaS5jb20vYXV0aC9yZWFsbXMvZ2xvYm8uY29tIiwianRpIjoiYTI4OTVhNWItODQ5OC00OGQyLWI4NDQtOWE3OGI2MTBiY2FlIiwibm9uY2UiOiJiODllYTgzYy01NGRjLTQ4ZGEtOGM5YS00NzVjODNhNTk2NGIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ1dDAwcnpjbXJlY2pyZGl2cmpsNCIsInNjcCI6WyJvcGVuaWQiLCJwcm9maWxlIl0sInNlc3Npb25fc3RhdGUiOiI0YmNlYTVjZC1mNDEzLTQwZWUtYWNjMy1mNzMzMTc4NmEzOTkiLCJzaWQiOiI0YmNlYTVjZC1mNDEzLTQwZWUtYWNjMy1mNzMzMTc4NmEzOTkiLCJzdWIiOiIwMWFkMzg3OC03OTFkLTQ5YmYtOTMyYy1lMmZiYzdmMzU3OTAiLCJ0eXAiOiJCZWFyZXIifQ.omDpAktaY_o_w4rqluEYkMPyOLhdh2yEqotcZkxsa_rXWTZ3EDJP3Yy6s-_d6SqDlT4b2pieRZ2g_T1hTJXavdD3ZyI_RydCzGJtyig5YwoF1d9t87NmB813QtxouOlvUMqGsZ1EmMgMsjYjJizsiSbVWUvsQvR9k5dfUTx-bgMBfpmqEiDR_cIIQPfalaaqEs6jkUMiHzKp7nznud1lkJcTYc5HIkwaZqpDx3dOsc7w4VIyEENDlrmafKuNhHchxJWxtyjJvlPIzPYcLKWuQtnXzBzF3mByT35iulydD2v4LXl9wlJwOqU5037moYRM7TrPOgbGrmrP0QUwNTayTQ',
+                globoId: '01ad3878-791d-49bf-932c-e2fbc7f35790',
+                userName: 'Rodrigo Carneiro',
+                photoUrl:
+                    'https://s3.glbimg.com/v1/AUTH_20ffd9f95e20436f89670997a336894c/images/letters/r.png',
+            };
+
+            // window.OneSignalEDG.initOneSignal({ externalId: UserDataGloboId.glbid });
+        </script>
+
+        <script type="module" src="/src/main.js"></script>
+        <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" async></script>
+    </body>
+</html>
