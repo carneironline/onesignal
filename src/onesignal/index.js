@@ -14,12 +14,14 @@ function initOneSignal() {
 
     OneSignalDeferred.push(async function (OneSignal) {
         const settings = {
+            // appId: 'cc2ec633-9a92-4afa-89ca-be09643d6e36',
+            // safari_web_id: 'web.onesignal.auto.2bd24c9c-6b5e-41da-a209-1033c3319dfc',
+            // serviceWorkerPath: 'OneSignalSDKWorker.js',
+            // notifyButton: {
+            //     enable: true,
+            // },
+
             appId: 'cc2ec633-9a92-4afa-89ca-be09643d6e36',
-            safari_web_id: 'web.onesignal.auto.2bd24c9c-6b5e-41da-a209-1033c3319dfc',
-            serviceWorkerPath: 'OneSignalSDKWorker.js',
-            notifyButton: {
-                enable: true,
-            },
         };
 
         await OneSignal.init(settings);
